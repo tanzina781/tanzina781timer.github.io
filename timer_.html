@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="timerV2 copy.css">
+</head>
+<body>
+    <main>
+        <section class="main-field">
+            <div id="set-timer-button">
+                <button type="button"></button>
+            </div>
+            <div id="set-timer-overlay">
+                <div id="cancel-container">
+                    <span id="cancel-button">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </span>
+                </div>
+
+                <label for="hours" class="unit-label" id="hour-label">Hours</label>
+                <label for="minutes" class="unit-label" id="minute-label">Minutes</label>
+                <label for="secounds" class="unit-label" id="secound-label">Secounds</label>
+
+                <div class="input-container" id="hour-input-container">
+                    <button class="decrement" onclick="stepper('hours', -1)">-</button>
+                    <input type="number" id="hours" class="unit-input" min="0" step="1" value="0">
+                    <button class="increment" onclick="stepper('hours', 1)">+</button>
+                </div>
+
+                <div class="input-container" id="minute-input-container">
+                    <button class="decrement" onclick="stepper('minutes', -5)">-</button>
+                    <input type="number" id="minutes" class="unit-input" min="0" max="59" value="0" step="5">
+                    <button class="increment" onclick="stepper('minutes', 5)">+</button>
+                </div>
+
+                <div class="input-container" id="secound-input-container">
+                    <button class="decrement" onclick="stepper('secounds', -10)">-</button>
+                    <input type="number" id="secounds" class="unit-input" min="0" max="59" value="0" step="10">
+                    <button class="increment" onclick="stepper('secounds', 10)">+</button>
+                </div>
+
+                <button type="button" id="set-button">Set</button>
+            </div>
+
+            <div class="grid-items" id="border">
+                <div class="" id="inner-box">
+                    <span id="time">00:00:00</span><br>
+                    <span id="times-up">Times up!</span>
+                </div>
+            </div>
+
+            <section id="timer-controller">
+                <div class="buttons play-pause-container" id="play-container">
+                    <span class="play-pause">
+                        <i input type="button" class="fa-solid fa-play" id="play-button" onclick="play()"></i>
+                    </span>
+                </div>
+
+                <div class="buttons play-pause-container" id="pause-container">
+                    <span class="play-pause" onclick="pause()">
+                        <i input type="button" class="fa-solid fa-circle-pause" id="pause-button"></i>
+                
+                    </span>
+                </div>
+
+                <div class="buttons" id="reset-container">
+                    <span id="reset-button">
+                        <i type="button" class="fa-solid fa-rotate-right"></i>
+                    </span>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="timer_.js"></script> 
+    <script src="https://kit.fontawesome.com/11a2c4d99f.js" crossorigin="anonymous"></script>
+</body>
+</html>
